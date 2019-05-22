@@ -1,0 +1,125 @@
+<div class="p-non-exfoliate-outer-padding">
+
+{{#if block.data.details.email}}
+  {{#each-in block.data.details.email as |category categoryObject|}}
+      <div><span class="p-title">{{category}}</span></div>
+            <div>
+                <span class="p-key">Status: </span>
+                <span class="p-value">{{categoryObject.status}}</span>
+            </div>
+            <div>
+                <span class="p-key"> View Breaches: </span>
+                <span class="p-value">
+                     {{#each categoryObject.breaches_dldb_ids as |listItem|}}
+                           <a class="p-link" href="https://cyberriskanalytics.com/incidents/{{listItem}}"> Breach {{listItem}} {{fa-icon "external-link" class="external-icon"}}</a>
+                     {{/each}}
+                </span>
+            </div>
+  {{/each-in}}
+{{/if}}
+
+{{#if block.data.details.body.incidents}}
+{{#each  block.data.details.body.incidents as |result|}}
+<div>
+    <span class="p-title">{{fa-icon "info-circle" fixedWidth=true}} {{result.name}} Breach Information </span>
+</div>
+
+{{#if result.id}}
+<div class="whois-container">
+    <a class="p-link" href="https://cyberriskanalytics.com/incidents/{{result.id}}"> View Breach {{fa-icon "external-link" class="external-icon"}}</a>
+</div>
+{{/if}}
+
+  {{#if result.severity_score}}
+      <div>
+          <span class="p-key">Breach Severity Score: </span>
+          <span class="p-value">{{result.severity_score}}</span>
+      </div>
+  {{/if}}
+
+  {{#if result.incident_occurred}}
+      <div>
+          <span class="p-key">Date of Breach: </span>
+          <span class="p-value">{{moment-time result.incident_occurred}}</span>
+      </div>
+  {{/if}}
+
+  {{#if result.discovered_by_organization}}
+      <div>
+          <span class="p-key">Date Discovered by {{result.name}}: </span>
+          <span class="p-value">{{moment-time result.discovered_by_organization}}</span>
+      </div>
+  {{/if}}
+
+  {{#if result.total_affected}}
+      <div>
+          <span class="p-key">Total Number of Individuals Affected by Breach: </span>
+          <span class="p-value">{{result.total_affected}}</span>
+      </div>
+  {{/if}}
+
+  {{#if result.breach_type}}
+      <div>
+          <span class="p-key">Type of Breach: </span>
+          <span class="p-value">{{result.breach_type}}</span>
+      </div>
+  {{/if}}
+
+  {{#if result.data_type}}
+      <div>
+          <span class="p-key">Type of Breached Data: </span>
+          <span class="p-value">{{result.data_type}}</span>
+      </div>
+  {{/if}}
+
+{{#if result.inside_outside}}
+    <div>
+        <span class="p-key">Internal or Extenal Breach: </span>
+        <span class="p-value">{{result.inside_outside}}</span>
+    </div>
+{{/if}}
+
+{{#if result.third_party}}
+    <div>
+        <span class="p-key">Name of Third Parties Affected: </span>
+        <span class="p-value"> {{result.third_party_name}} </span>
+    </div>
+{{/if}}
+
+{{#if result.summary}}
+    <div>
+        <span class="p-key">Breach Summary: </span>
+        <span class="p-value">{{result.summary}}</span>
+    </div>
+{{/if}}
+
+<div>
+    <span class="p-title"> Organization Information </span>
+</div>
+
+{{#if result.organization_address}}
+    <div>
+        <span class="p-key">Organization Address: </span>
+        <span class="p-value">{{result.organization_address}}</span>
+    </div>
+{{/if}}
+
+{{#if result.economic_sector_name}}
+    <div>
+        <span class="p-key">Economic Sector: </span>
+        <span class="p-value">{{result.economic_sector_name}}</span>
+    </div>
+{{/if}}
+
+{{#if result.business_group}}
+    <div>
+        <span class="p-key">Business Group: </span>
+        <span class="p-value">{{result.business_group}}</span>
+    </div>
+{{/if}}
+
+<hr>
+
+{{/each}}
+{{/if}}
+</div>
