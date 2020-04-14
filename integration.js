@@ -250,7 +250,9 @@ function _lookupEntity(entityObj, token, options, cb) {
     if (entityObj.type === "domain") {
       const severityData = body.incidents.reduce(
         (agg, item) =>
-          !_.isEmpty(item.severity_score) ? [...agg, item.severity_score] : agg,
+          item.severity_score !== undefined && item.severity_score !== null
+            ? [...agg, item.severity_score]
+            : agg,
         []
       );
       severity = severityData.length
