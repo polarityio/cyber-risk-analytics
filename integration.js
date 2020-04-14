@@ -253,7 +253,9 @@ function _lookupEntity(entityObj, token, options, cb) {
           !_.isEmpty(item.severity_score) ? [...agg, item.severity_score] : agg,
         []
       );
-      severity = "Highest Severity Breach Score: " + Math.max(...severityData);
+      severity = severityData.length
+        ? "Highest Severity Breach Score: " + Math.max(...severityData)
+        : null;
     }
 
     const emailData = entityObj.type === "email" && body;
