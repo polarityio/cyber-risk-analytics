@@ -1,23 +1,23 @@
 
-{{#if block.data.details.body.total_entries}}
+{{#if details.body.total_entries}}
   <span class="integration-summary-tag integration-background-color integration-border-color">
     <span class="acronym integration-text-bold-color">{{block.acronym}}</span>
-    <span class="integration-text-color">Total Breaches: {{block.data.details.body.total_entries}}</span>
+    <span class="integration-text-color">Total Breaches: {{details.body.total_entries}}</span>
   </span>
 {{/if}}
 
-{{#if block.data.details.severity}}
+{{#if details.severity}}
   <span class="integration-summary-tag integration-background-color integration-border-color">
     <span class="acronym integration-text-bold-color">{{block.acronym}}</span>
-    <span class="integration-text-color">{{block.data.details.severity}}</span>
+    <span class="integration-text-color">{{details.severity}}</span>
   </span>
 {{/if}}
 
-{{#if block.data.details.email}}
-  {{#each-in block.data.details.email as |category categoryObject|}}
+{{#if emails}}
+  {{#each emails as |category|}}
   <span class="integration-summary-tag integration-background-color integration-border-color">
     <span class="acronym integration-text-bold-color">{{block.acronym}}</span>
-    <span class="integration-text-color">{{categoryObject.status}}</span>
+    <span class="integration-text-color">{{category.status}}</span>
   </span>
-  {{/each-in}}
+  {{/each}}
 {{/if}}

@@ -128,7 +128,7 @@ function doLookup(entities, options, cb) {
     getAuthToken(options, (err, token) => {
         if (err) {
             Logger.error('get token errored', err);
-            callback({ err: err });
+            cb({ err: err });
             return;
         }
 
