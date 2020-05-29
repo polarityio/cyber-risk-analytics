@@ -1,7 +1,7 @@
 {
   "main": "./integration.js",
   "name": "cyberRiskAnalytics",
-  "version": "3.0.0-beta",
+  "version": "3.0.1-beta",
   "private": true,
   "dependencies": {
     "async": "^2.6",
