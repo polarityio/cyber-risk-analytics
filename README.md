@@ -16,11 +16,11 @@ clientId needed for Cyber Risk Analytics.
 ### Cyber Risk Analytics client secret key
 client secret key needed for Cyber Risk Analytics.
 
-### Blacklist Domains
-List of domains or Ips that you never want to send to Cyber Risk Analytics
+### Ignore List
+List of domains that you never want to send to Cyber Risk Analytics.
 
-### Domain Blacklist Regex
-Domains that match the given regex will not be looked up (if blank, no domains will be black listed)
+### Ignore Domain Regex
+Domains that match the given regex will not be looked up.
 
 ## Polarity
 

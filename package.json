@@ -1,13 +1,13 @@
 {
   "main": "./integration.js",
   "name": "cyberRiskAnalytics",
-  "version": "3.0.1-beta",
+  "version": "3.0.2-beta",
   "private": true,
   "dependencies": {
-    "async": "^2.6",
-    "bunyan": "^1.8.12",
-    "lodash": "^4.17",
-    "request": "^2.88",
-    "node-cache": "^4.2.0"
+    "async": "^3.2",
+    "bunyan": "^1.8.14",
+    "lodash": "^4.17.19",
+    "request": "^2.88.2",
+    "node-cache": "^5.1.2"
   }
 }
