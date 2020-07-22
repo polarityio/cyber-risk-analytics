@@ -111,7 +111,7 @@ module.exports = {
       description: "List of domains or that you never want to send to Cyber Risk Analytics",
       default: "",
       type: "text",
-      userCanEdit: true,
+      userCanEdit: false,
       adminOnly: false
     },
     {
@@ -120,7 +120,7 @@ module.exports = {
       description: "Domains that match the given regex will not be looked up.",
       default: "",
       type: "text",
-      userCanEdit: true,
+      userCanEdit: false,
       adminOnly: false
     }
   ]
