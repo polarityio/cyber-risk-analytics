@@ -106,8 +106,8 @@ module.exports = {
       adminOnly: false
     },
     {
-      key: "blacklist",
-      name: "Blacklist Domains",
+      key: "blocklist",
+      name: "Ignored Domain list",
       description: "List of domains or that you never want to send to Cyber Risk Analytics",
       default: "",
       type: "text",
@@ -115,9 +115,9 @@ module.exports = {
       adminOnly: false
     },
     {
-      key: "domainBlacklistRegex",
-      name: "Domain Black List Regex",
-      description: "Domains that match the given regex will not be looked up (if blank, no domains will be black listed)",
+      key: "domainBlocklistRegex",
+      name: "Ignored Domain Regex",
+      description: "Domains that match the given regex will not be looked up.",
       default: "",
       type: "text",
       userCanEdit: false,
