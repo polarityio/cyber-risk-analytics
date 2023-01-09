@@ -1,0 +1,77 @@
+{
+  "name": "Cyber Risk Analytics",
+  "acronym": "CRA",
+  "description": "Risk Based Security: Cyber Risk Analytics",
+  "entityTypes": [
+    "domain",
+    "email"
+  ],
+  "styles": [
+    "./styles/cra.less"
+  ],
+  "block": {
+    "component": {
+      "file": "./components/block.js"
+    },
+    "template": {
+      "file": "./templates/block.hbs"
+    }
+  },
+  "summary": {
+    "component": {
+      "file": "./components/summary.js"
+    },
+    "template": {
+      "file": "./templates/summary.hbs"
+    }
+  },
+  "request": {
+    "cert": "",
+    "key": "",
+    "passphrase": "",
+    "ca": "",
+    "proxy": "",
+    "rejectUnauthorized": true
+  },
+  "logging": {
+    "level": "info"
+  },
+  "options": [
+    {
+      "key": "clientId",
+      "name": "Client ID",
+      "description": "Cyber Risk Analytics Client ID",
+      "default": "",
+      "type": "text",
+      "userCanEdit": true,
+      "adminOnly": false
+    },
+    {
+      "key": "clientSecret",
+      "name": "Client Secret",
+      "description": "Cyber Risk Analytics Client Secret Key",
+      "default": "",
+      "type": "password",
+      "userCanEdit": true,
+      "adminOnly": false
+    },
+    {
+      "key": "blocklist",
+      "name": "Ignored Domain list",
+      "description": "List of domains or that you never want to send to Cyber Risk Analytics",
+      "default": "",
+      "type": "text",
+      "userCanEdit": false,
+      "adminOnly": false
+    },
+    {
+      "key": "domainBlocklistRegex",
+      "name": "Ignored Domain Regex",
+      "description": "Domains that match the given regex will not be looked up.",
+      "default": "",
+      "type": "text",
+      "userCanEdit": false,
+      "adminOnly": false
+    }
+  ]
+}
