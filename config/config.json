@@ -2,13 +2,9 @@
   "name": "Cyber Risk Analytics",
   "acronym": "CRA",
   "description": "Risk Based Security: Cyber Risk Analytics",
-  "entityTypes": [
-    "domain",
-    "email"
-  ],
-  "styles": [
-    "./styles/cra.less"
-  ],
+  "entityTypes": ["domain", "email"],
+  "defaultColor": "light-blue",
+  "styles": ["./styles/cra.less"],
   "block": {
     "component": {
       "file": "./components/block.js"
