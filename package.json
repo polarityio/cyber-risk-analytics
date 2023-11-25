@@ -4,7 +4,7 @@
   "main": "./integration.js",
   "private": true,
   "dependencies": {
-    "async": "^3.2",
+    "async": "^3.2.5",
     "bunyan": "^1.8.14",
     "lodash": "^4.17.19",
     "node-cache": "^5.1.2",
